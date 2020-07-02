@@ -33,6 +33,7 @@ export default class HomeScreen extends Component {
     Navigation.push('HomeScreen', {
       component: {
         name: 'ArtistScreen',
+        id: 'ArtistScreen',
         options: {
           topBar: {
             title: {

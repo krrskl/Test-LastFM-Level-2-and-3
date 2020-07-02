@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@types/react-native-indicators": "^0.16.0",
     "apisauce": "^1.1.1",
     "react": "16.11.0",
     "react-native": "0.62.2",

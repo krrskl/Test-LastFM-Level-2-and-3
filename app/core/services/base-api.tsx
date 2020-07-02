@@ -13,12 +13,17 @@ export class BaseService {
     });
 
     this.api.axiosInstance.interceptors.request.use((requestConfig) => {
-      console.log(requestConfig.url);
+      requestConfig.params = {
+        ...requestConfig.params,
+        api_key: config.api_key,
+        format: 'json',
+      };
+
       return requestConfig;
     });
   }
 
-  public get(endpoint: string, params: {} = {}) {
-    this.api.get(endpoint, params);
+  public get(endpoint: string, params: {} = {}): Promise<any> {
+    return this.api.get(endpoint, params);
   }
 }
