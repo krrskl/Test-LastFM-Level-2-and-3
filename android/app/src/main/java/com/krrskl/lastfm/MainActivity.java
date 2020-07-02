@@ -1,4 +1,4 @@
-package com.lastfmlevelone;
+package com.krrskl.lastfm;
 
 import com.reactnativenavigation.NavigationActivity;
 

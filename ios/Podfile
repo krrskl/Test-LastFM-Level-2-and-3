@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'LastFMLevelOne' do
-  # Pods for LastFMLevelOne
+target 'LastFMLevelTwoAndThree' do
+  # Pods for LastFMLevelTwoAndThree
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -79,7 +79,7 @@ target 'LastFMLevelOne' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
-  target 'LastFMLevelOneTests' do
+  target 'LastFMLevelTwoAndThreeTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -96,10 +96,10 @@ target 'LastFMLevelOne' do
   end
 end
 
-target 'LastFMLevelOne-tvOS' do
-  # Pods for LastFMLevelOne-tvOS
+target 'LastFMLevelTwoAndThree-tvOS' do
+  # Pods for LastFMLevelTwoAndThree-tvOS
 
-  target 'LastFMLevelOne-tvOSTests' do
+  target 'LastFMLevelTwoAndThree-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
