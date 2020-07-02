@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {SafeAreaView, View, FlatList} from 'react-native';
-import {Text, Badge, Card} from 'react-native-elements';
+import {Text, Badge, Card, Icon} from 'react-native-elements';
 import {Artist} from '../../core/models/Artist.model';
 import ArtistDetailsStyles from './styles';
 import NumberFormat from 'react-number-format';
@@ -34,7 +34,10 @@ export default class ArtistDetailsScreen extends Component<
                 badgeStyle={ArtistDetailsStyles.badgeListeners}
                 status="primary"
                 value={
-                  <Text style={ArtistDetailsStyles.whiteText}>{value}</Text>
+                  <View style={ArtistDetailsStyles.badgeContainer}>
+                    <Icon name={'headset'} color={'#ffffff'} size={15} />
+                    <Text style={ArtistDetailsStyles.whiteText}> {value}</Text>
+                  </View>
                 }
               />
             )}

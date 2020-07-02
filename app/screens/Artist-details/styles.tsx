@@ -4,6 +4,12 @@ const ArtistDetailsStyles = StyleSheet.create({
   mainContainer: {flex: 1, marginTop: 20},
   centerText: {textAlign: 'center'},
   badgeListeners: {paddingHorizontal: 10},
+  badgeContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
   whiteText: {color: '#ffffff'},
   col: {
     width: '50%',
