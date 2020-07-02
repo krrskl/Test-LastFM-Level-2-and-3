@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "LastFMLevelOne-tvOS.app"
-               BlueprintName = "LastFMLevelOne-tvOS"
-               ReferencedContainer = "container:LastFMLevelOne.xcodeproj">
+               BuildableName = "LastFMLevelTwoAndThree-tvOS.app"
+               BlueprintName = "LastFMLevelTwoAndThree-tvOS"
+               ReferencedContainer = "container:LastFMLevelTwoAndThree.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "LastFMLevelOne-tvOSTests.xctest"
-               BlueprintName = "LastFMLevelOne-tvOSTests"
-               ReferencedContainer = "container:LastFMLevelOne.xcodeproj">
+               BuildableName = "LastFMLevelTwoAndThree-tvOSTests.xctest"
+               BlueprintName = "LastFMLevelTwoAndThree-tvOSTests"
+               ReferencedContainer = "container:LastFMLevelTwoAndThree.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "LastFMLevelOne-tvOS.app"
-            BlueprintName = "LastFMLevelOne-tvOS"
-            ReferencedContainer = "container:LastFMLevelOne.xcodeproj">
+            BuildableName = "LastFMLevelTwoAndThree-tvOS.app"
+            BlueprintName = "LastFMLevelTwoAndThree-tvOS"
+            ReferencedContainer = "container:LastFMLevelTwoAndThree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "LastFMLevelOne-tvOS.app"
-            BlueprintName = "LastFMLevelOne-tvOS"
-            ReferencedContainer = "container:LastFMLevelOne.xcodeproj">
+            BuildableName = "LastFMLevelTwoAndThree-tvOS.app"
+            BlueprintName = "LastFMLevelTwoAndThree-tvOS"
+            ReferencedContainer = "container:LastFMLevelTwoAndThree.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

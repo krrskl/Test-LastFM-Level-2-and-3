@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.lastfmlevelone"
+        applicationId "com.krrskl.lastfm"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
