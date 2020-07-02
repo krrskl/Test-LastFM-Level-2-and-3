@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {ListItem} from 'react-native-elements';
+import {ListItem, Text} from 'react-native-elements';
 import {Artist} from 'app/core/models/Artist.model';
-
+import NumberFormat from 'react-number-format';
 interface ArtistItemProps {
   artist: Artist;
 }
@@ -12,12 +12,20 @@ export default class ArtistItemComponent extends Component<ArtistItemProps> {
   }
 
   render() {
+    const {artist} = this.props;
     return (
       <ListItem
-        key={this.props.artist.mbid}
-        title={this.props.artist.name}
-        subtitle={this.props.artist.listeners}
-        leftAvatar={{source: {uri: this.props.artist.image[0]['#text']}}}
+        key={artist.mbid}
+        title={artist.name}
+        subtitle={
+          <NumberFormat
+            value={artist.listeners}
+            displayType={'text'}
+            thousandSeparator={true}
+            renderText={(value) => <Text>{value}</Text>}
+          />
+        }
+        leftAvatar={{source: {uri: artist.image[0]['#text']}}}
         bottomDivider
         chevron
       />
