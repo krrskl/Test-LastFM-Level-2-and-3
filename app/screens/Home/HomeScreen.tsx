@@ -22,22 +22,30 @@ export default class HomeScreen extends Component {
           title="Artistas principales"
           buttonStyle={HomeStyles.roundedButton}
           onPress={() => {
-            this.navToTopArtits();
+            this.navTo('ArtistScreen', 'Top Artist');
+          }}
+        />
+
+        <Button
+          title="Los mejores temas"
+          buttonStyle={[HomeStyles.roundedButton, HomeStyles.marginTopButton]}
+          onPress={() => {
+            this.navTo('TracksScreen', 'Top Tracks');
           }}
         />
       </View>
     );
   }
 
-  navToTopArtits() {
+  navTo(screenId: string, title: string) {
     Navigation.push('HomeScreen', {
       component: {
-        name: 'ArtistScreen',
-        id: 'ArtistScreen',
+        name: screenId,
+        id: screenId,
         options: {
           topBar: {
             title: {
-              text: 'Top Artist',
+              text: title,
             },
           },
         },

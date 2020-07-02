@@ -8,6 +8,7 @@ const HomeStyles = StyleSheet.create({
     paddingHorizontal: 20,
     borderRadius: 50,
   },
+  marginTopButton: {marginTop: 10},
 });
 
 export default HomeStyles;
