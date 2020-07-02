@@ -11,6 +11,14 @@ Navigation.events().registerAppLaunchedListener(async () => {
           {
             component: {
               name: 'HomeScreen',
+              id: 'HomeScreen',
+              options: {
+                topBar: {
+                  title: {
+                    text: 'Prueba técnica Level 1',
+                  },
+                },
+              },
             },
           },
         ],
