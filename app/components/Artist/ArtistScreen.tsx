@@ -10,4 +10,6 @@ export default class ArtistScreen extends Component {
       </View>
     );
   }
+
+  componentDidMount() {}
 }
