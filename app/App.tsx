@@ -15,7 +15,7 @@ Navigation.events().registerAppLaunchedListener(async () => {
               options: {
                 topBar: {
                   title: {
-                    text: 'Prueba técnica Level 1',
+                    text: 'Prueba técnica Level 2 y 3',
                   },
                 },
               },
