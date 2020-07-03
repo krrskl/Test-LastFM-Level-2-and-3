@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
 import {ListItem, Text} from 'react-native-elements';
-import {Track} from 'app/core/models/Track.model';
+import {Track} from './../core/models/Track.model';
 import NumberFormat from 'react-number-format';
-import {Navigation} from 'react-native-navigation';
+import {connect} from 'react-redux';
+import {goToTrackDetails} from './../core/store/effects/track.effects';
+
 interface TrackItemProps {
   track: Track;
+  goToTrackDetails: any;
 }
 
-export default class TrackItemComponent extends Component<TrackItemProps> {
+class TrackItemComponent extends Component<TrackItemProps> {
   constructor(props: any) {
     super(props);
   }
@@ -28,30 +31,21 @@ export default class TrackItemComponent extends Component<TrackItemProps> {
         }
         leftAvatar={{source: {uri: track.image[0]['#text']}}}
         onPress={() => {
-          this.viewDetails(track);
+          this.props.goToTrackDetails(track);
         }}
         bottomDivider
         chevron
       />
     );
   }
-
-  viewDetails(track: Track) {
-    Navigation.push('TracksScreen', {
-      component: {
-        name: 'TrackDetailsScreen',
-        id: 'TrackDetailsScreen',
-        passProps: {
-          track,
-        },
-        options: {
-          topBar: {
-            title: {
-              text: `Detalles de ${this.props.track.name}`,
-            },
-          },
-        },
-      },
-    });
-  }
 }
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    goToTrackDetails: (track: Track) => {
+      return dispatch(goToTrackDetails(track));
+    },
+  };
+};
+
+export default connect(null, mapDispatchToProps)(TrackItemComponent);
