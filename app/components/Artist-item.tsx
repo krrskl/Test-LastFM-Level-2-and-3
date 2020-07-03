@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 import {ListItem, Text} from 'react-native-elements';
 import {Artist} from 'app/core/models/Artist.model';
 import NumberFormat from 'react-number-format';
-import {Navigation} from 'react-native-navigation';
+import {connect} from 'react-redux';
+import {goToArtistDetails} from './../core/store/effects/artist.effects';
 interface ArtistItemProps {
   artist: Artist;
+  goToArtistDetails: any;
 }
 
-export default class ArtistItemComponent extends Component<ArtistItemProps> {
+class ArtistItemComponent extends Component<ArtistItemProps> {
   constructor(props: any) {
     super(props);
   }
@@ -28,30 +30,21 @@ export default class ArtistItemComponent extends Component<ArtistItemProps> {
         }
         leftAvatar={{source: {uri: artist.image[0]['#text']}}}
         onPress={() => {
-          this.viewDetails(artist);
+          this.props.goToArtistDetails(artist);
         }}
         bottomDivider
         chevron
       />
     );
   }
-
-  viewDetails(artist: Artist) {
-    Navigation.push('ArtistScreen', {
-      component: {
-        name: 'ArtistDetailsScreen',
-        id: 'ArtistDetailsScreen',
-        passProps: {
-          artist,
-        },
-        options: {
-          topBar: {
-            title: {
-              text: `Detalles de ${this.props.artist.name}`,
-            },
-          },
-        },
-      },
-    });
-  }
 }
+
+const mapDispatchToProps = (dispatch: any) => {
+  return {
+    goToArtistDetails: (artist: Artist) => {
+      return dispatch(goToArtistDetails(artist));
+    },
+  };
+};
+
+export default connect(null, mapDispatchToProps)(ArtistItemComponent);

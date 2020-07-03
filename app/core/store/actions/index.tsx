@@ -1,3 +1,4 @@
 import * as TrackActions from './track.actions';
+import * as ArtistActions from './artist.actions';
 
-export {TrackActions};
+export {TrackActions, ArtistActions};

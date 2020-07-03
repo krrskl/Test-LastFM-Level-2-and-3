@@ -4,15 +4,13 @@ import {Text, Badge, Card, Icon} from 'react-native-elements';
 import {Artist} from '../../core/models/Artist.model';
 import ArtistDetailsStyles from './styles';
 import NumberFormat from 'react-number-format';
+import {connect} from 'react-redux';
 
 interface ArtistDetailsScreenProps {
   artist: Artist | null;
 }
 
-export default class ArtistDetailsScreen extends Component<
-  ArtistDetailsScreenProps,
-  any
-> {
+class ArtistDetailsScreen extends Component<ArtistDetailsScreenProps, any> {
   constructor(props: any) {
     super(props);
   }
@@ -70,3 +68,12 @@ export default class ArtistDetailsScreen extends Component<
     );
   }
 }
+
+const mapStateToProps = (state: any) => {
+  const {artistsScreenStore} = state;
+  return {
+    artist: artistsScreenStore.artist,
+  };
+};
+
+export default connect(mapStateToProps)(ArtistDetailsScreen);

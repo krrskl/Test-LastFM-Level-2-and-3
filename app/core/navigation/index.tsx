@@ -17,14 +17,16 @@ const store = configureStore();
 export function registerScreens(): void {
   Navigation.registerComponent('HomeScreen', () => HomeScreen);
   Navigation.registerComponentWithRedux(
-    'ArtistScreen',
+    'ArtistsScreen',
     () => ArtistScreen,
     Provider,
     store,
   );
-  Navigation.registerComponent(
+  Navigation.registerComponentWithRedux(
     'ArtistDetailsScreen',
     () => ArtistDetailsScreen,
+    Provider,
+    store,
   );
   Navigation.registerComponentWithRedux(
     'TracksScreen',

@@ -22,7 +22,7 @@ export default class HomeScreen extends Component {
           title="Artistas principales"
           buttonStyle={HomeStyles.roundedButton}
           onPress={() => {
-            this.navTo('ArtistScreen', 'Top Artist');
+            this.navTo('ArtistsScreen', 'Top Artist');
           }}
         />
 

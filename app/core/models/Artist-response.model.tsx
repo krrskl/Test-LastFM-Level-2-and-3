@@ -7,13 +7,13 @@ export interface ArtistResponse {
 
 export interface Topartists {
   artist: Artist[];
-  '@attr': Attr;
+  '@attr': ArtistAttr;
 }
 
-export interface Attr {
-  country: string;
+export interface ArtistAttr {
+  country?: string;
   page: string;
-  perPage: string;
+  perPage?: string;
   totalPages: string;
-  total: string;
+  total?: string;
 }

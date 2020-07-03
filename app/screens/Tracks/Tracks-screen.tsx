@@ -22,7 +22,6 @@ interface TracksScreenProps {
   fetchTracks: () => {};
   fetchNextPage: () => {};
   fetchPrevPage: () => {};
-  dataSource: any;
 }
 
 class TracksScreen extends Component<TracksScreenProps, any> {
