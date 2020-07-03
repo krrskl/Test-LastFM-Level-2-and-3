@@ -4,15 +4,13 @@ import {Text, Badge, Card, Icon} from 'react-native-elements';
 import {Track} from '../../core/models/Track.model';
 import TrackDetailsStyles from './styles';
 import NumberFormat from 'react-number-format';
+import {connect} from 'react-redux';
 
 interface TrackDetailsScreenProps {
   track: Track | null;
 }
 
-export default class TrackDetailsScreen extends Component<
-  TrackDetailsScreenProps,
-  any
-> {
+class TrackDetailsScreen extends Component<TrackDetailsScreenProps, any> {
   constructor(props: any) {
     super(props);
   }
@@ -70,3 +68,12 @@ export default class TrackDetailsScreen extends Component<
     );
   }
 }
+
+const mapStateToProps = (state: any) => {
+  const {tracksScreenStore} = state;
+  return {
+    track: tracksScreenStore.track,
+  };
+};
+
+export default connect(mapStateToProps)(TrackDetailsScreen);

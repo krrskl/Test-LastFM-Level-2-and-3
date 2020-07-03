@@ -11,9 +11,9 @@ export interface Tracks {
 }
 
 export interface TracksAttr {
-  country: string;
+  country?: string;
   page: string;
-  perPage: string;
+  perPage?: string;
   totalPages: string;
-  total: string;
+  total?: string;
 }
